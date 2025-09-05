@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./style.css" rel="stylesheet">
+  <title>Multi Step Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white p-6 rounded-2xl shadow-lg w-full max-w-lg">
+
+    <!-- progress bar -->
+    <div class="flex items-center mb-6">
+      <div class="flex-1 h-2 bg-gray-200 rounded-full">
+        <div id="progress" class="h-2 bg-blue-500 rounded-full w-1/3"></div>
+      </div>
+      <span id="step-count" class="ml-3 text-sm font-semibold text-gray-600">Step 1 of 3</span>
+    </div>
+
+    <form id="multiStepForm">
+
+      <!-- Step 1 -->
+      <div class="form-step active">
+        <h2 class="text-xl font-bold mb-4">Step 1: Personal Info</h2>
+        <div class="mb-3">
+          <input type="text" placeholder="Full Name" required
+            class="w-full mb-3 p-3 border rounded-lg focus:ring-2 focus:ring-blue-400">
+          <!-- <p class="error text-red-500 text-sm mt-1 hidden">Full name is required</p> -->
+        </div>
+        <div class="mb-3">
+          <input type="number" placeholder="Phone Number" required
+            class="w-full mb-3 p-3 border rounded-lg focus:ring-2 focus:ring-blue-400">
+          <!-- <p class="error text-red-500 text-sm mt-1 hidden">Phone number is required</p> -->
+        </div>
+        <div class="mb-3">
+          <input type="text" placeholder="Gender" required
+            class="w-full mb-3 p-3 border rounded-lg focus:ring-2 focus:ring-blue-400">
+          <!-- <p class="error text-red-500 text-sm mt-1 hidden">Gender is required</p> -->
+        </div>
+        <button type="button"
+          class="next-btn w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">Next</button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="form-step hidden">
+        <h2 class="text-xl font-bold mb-4">Step 2:Address</h2>
+        <div class="mb-3">
+          <input type="text" placeholder="Street Address" required
+            class="w-full mb-3 p-3 border rounded-lg focus:ring-2 focus:ring-blue-400">
+          <!-- <p class="error text-red-500 text-sm mt-1 hidden"> Street address is required</p> -->
+        </div>
+        <div class="mb-3">
+          <input type="text" placeholder="City" required
+            class="w-full mb-3 p-3 border rounded-lg focus:ring-2 focus:ring-blue-400">
+          <!-- <p class="error text-red-500 text-sm mt-1 hidden">City is required</p> -->
+        </div>
+        <div class="mb-3">
+          <input type="text" placeholder="State" required
+            class="w-full mb-3 p-3 border rounded-lg focus:ring-2 focus:ring-blue-400">
+          <!-- <p class="error text-red-500 text-sm mt-1 hidden">State is required</p> -->
+        </div>
+        <div class="flex justify-between">
+          <button type="button"
+            class="prev-btn bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600">Previous</button>
+          <button type="button"
+            class="next-btn bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="form-step hidden">
+        <h2 class="text-xl font-bold mb-4">Step 3: Account Set Up</h2>
+        <div class="mb-3">
+          <input type="email" placeholder="Email" required
+            class="w-full mb-3 p-3 border rounded-lg focus:ring-2 focus:ring-blue-400">
+          <!-- <p class="error text-red-500 text-sm mt-1 hidden">Email is required</p> -->
+        </div>
+        <div class="mb-3">
+          <input type="password" placeholder="Password" required
+            class="w-full mb-3 p-3 border rounded-lg focus:ring-2 focus:ring-blue-400">
+          <!-- <p class="error text-red-500 text-sm mt-1 hidden">Password is required</p> -->
+        </div>
+        <div class="mb-3">
+          <input type="password" placeholder="Confirm Password" required
+            class="w-full mb-3 p-3 border rounded-lg focus:ring-2 focus:ring-blue-400">
+          <!-- <p class="error text-red-500 text-sm mt-1 hidden">Passwords do not match</p> -->
+        </div>
+        <div class="flex justify-between">
+          <button type="button"
+            class="prev-btn bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600">Previous</button>
+          <button type="submit" 
+          class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">Submit</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+
+  <script src="./script.js"></script>
+  <script src="./tailwind.config.js"></script>
+</body>
+
+</html>
